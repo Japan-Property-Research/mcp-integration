@@ -12,20 +12,22 @@ Connect Japan Property Research data to AI agents through MCP.
 ### 1) Configure environment
 ```bash
 export JPR_API_KEY="YOUR_API_KEY"
+export JPR_API_BASE_URL="https://<your-real-api-host>"
 ```
 
 ### 2) Add server to your MCP client
-Use your MCP client config to register the server command.
+Use your actual MCP server package/command in client configuration.
 
-Example (adapt to your client):
+Example placeholder (replace with your published package):
 ```json
 {
   "mcpServers": {
     "jpr": {
       "command": "npx",
-      "args": ["-y", "@japan-property-research/mcp-server"],
+      "args": ["-y", "<your-real-mcp-server-package>"],
       "env": {
-        "JPR_API_KEY": "YOUR_API_KEY"
+        "JPR_API_KEY": "YOUR_API_KEY",
+        "JPR_API_BASE_URL": "https://<your-real-api-host>"
       }
     }
   }
